@@ -1,19 +1,20 @@
 import React from "react";
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <div className="flex justify-between px-16 py-5 bg-black">
-      <a href="/">
+      <Link to="/">
         <img src={logo} className="w-10 h-10" alt="Logo" />
-      </a>
+      </Link>
       <div className="flex gap-10 items-center">
-        <a href="/" className="text-white hover:text-pink">
+        <Link to="/transaction" className="text-white hover:text-pink">
           Transaction
-        </a>
-        <a href="/" className="text-white hover:text-pink">
+        </Link>
+        <Link to="/" className="text-white hover:text-pink">
           Data
-        </a>
+        </Link>
       </div>
     </div>
   );
