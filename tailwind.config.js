@@ -6,7 +6,7 @@ export default {
   ],
   theme: {
     colors: {
-      black: '#000',
+      black: '#131316',
       pink: '#eb5980',
       white: '#e6e6e6'
     },
