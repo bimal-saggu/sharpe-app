@@ -9,10 +9,16 @@ const NavBar = () => {
         <img src={logo} className="w-10 h-10" alt="Logo" />
       </Link>
       <div className="flex gap-10 items-center">
-        <Link to="/transaction" className="text-white hover:text-pink">
+        <Link
+          to="/transaction"
+          className="text-white hover:text-pink transition duration-200 ease-in"
+        >
           Transaction
         </Link>
-        <Link to="/" className="text-white hover:text-pink">
+        <Link
+          to="/"
+          className="text-white hover:text-pink transition duration-200 ease-in"
+        >
           Data
         </Link>
       </div>
