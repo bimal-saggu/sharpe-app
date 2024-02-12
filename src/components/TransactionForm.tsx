@@ -33,7 +33,7 @@ const TransactionForm = () => {
     }
   };
   return (
-    <div className="m-16 w-72 md:w-1/2 lg:w-1/3 bg-darkGray rounded-2xl ring-1 ring-white shadow-xl shadow-midGray">
+    <div className="m-12 w-72 md:w-1/2 lg:w-1/3 bg-darkGray rounded-2xl ring-1 ring-white shadow-xl shadow-midGray">
       <div className="p-5">
         <form onSubmit={handleSubmit(onSubmit)}>
           <h1 className="p-5 text-3xl font-semibold  text-white">
