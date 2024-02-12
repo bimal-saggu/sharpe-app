@@ -16,7 +16,7 @@ const NavBar = () => {
           Transaction
         </Link>
         <Link
-          to="/"
+          to="/data"
           className="text-white hover:text-pink transition duration-200 ease-in"
         >
           Data
