@@ -12,6 +12,7 @@ export default {
       gray: '#383842',
       pink: '#eb5980',
       darkPink: '#DA1B4E',
+      danger: '#FF0000',
       white: '#e6e6e6'
     },
     extend: {},
