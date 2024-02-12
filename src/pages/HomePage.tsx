@@ -1,5 +1,11 @@
+import TransactionForm from "../components/TransactionForm";
+
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <div>
+      <TransactionForm />
+    </div>
+  );
 };
 
 export default HomePage;
