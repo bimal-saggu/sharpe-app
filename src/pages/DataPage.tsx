@@ -22,22 +22,22 @@ const DataPage = () => {
     fetchData();
   }, []);
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center m-10">
       <table className="table-auto">
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Wallet Address</th>
-            <th>Amount</th>
+        <thead className="">
+          <tr className="bg-darkGray h-14">
+            <th className="hidden md:table-cell text-white">Id</th>
+            <th className="text-white">Name</th>
+            <th className="hidden md:table-cell text-white">Wallet Address</th>
+            <th className="text-white">Amount</th>
           </tr>
         </thead>
         <tbody>
           {transactionData.map((trans: any) => (
-            <tr key={trans.id}>
-              <td>{trans.id}</td>
+            <tr key={trans.id} className="bg-midGray">
+              <td className="hidden md:table-cell">{trans.id}</td>
               <td>{trans.name}</td>
-              <td>{trans.address}</td>
+              <td className="hidden md:table-cell">{trans.address}</td>
               <td>{trans.amount}</td>
             </tr>
           ))}
