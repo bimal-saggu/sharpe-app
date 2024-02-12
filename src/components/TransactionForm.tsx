@@ -2,6 +2,8 @@ import { FieldValues, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { isAddress } from "ethers";
+import { db } from "../firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 const schema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters" }),
@@ -20,8 +22,16 @@ const TransactionForm = () => {
     formState: { errors },
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
-  const onSubmit = (data: FieldValues) => console.log(data);
+  const dbref = collection(db, "userinfo");
 
+  const onSubmit = async (data: FieldValues) => {
+    try {
+      await addDoc(dbref, data);
+      console.log(data);
+    } catch (error) {
+      alert(error);
+    }
+  };
   return (
     <div className="m-16 w-72 md:w-1/2 lg:w-1/3 bg-darkGray rounded-2xl ring-1 ring-white shadow-xl shadow-midGray">
       <div className="p-5">
